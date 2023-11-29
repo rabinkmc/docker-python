@@ -2,6 +2,7 @@ import subprocess
 import os
 import sys
 import tempfile
+import ctypes
 
 
 def main():
@@ -20,6 +21,10 @@ def main():
         ]
     )
     os.chroot(TEMP_DIR)
+    CLONE_NEWPID = 0x20000000
+    libc = ctypes.cdll.LoadLibrary(None)
+    libc.unshare(CLONE_NEWPID)
+
     completed_process = subprocess.run([command, *args], capture_output=True)
     if completed_process.stdout:
         print(completed_process.stdout.decode("utf-8"), end="")
