@@ -12,6 +12,9 @@ def main():
     elif completed_process.stderr:
         print(completed_process.stderr.decode("utf-8"), file=sys.stderr, end="")
 
+    rc = completed_process.returncode
+    sys.exit(rc)
+
 
 if __name__ == "__main__":
     main()
