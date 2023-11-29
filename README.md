@@ -1,33 +1,12 @@
 [![progress-banner](https://backend.codecrafters.io/progress/docker/b20d43e9-bf68-42f9-aec7-6287045b3923)](https://app.codecrafters.io/users/codecrafters-bot?r=2qF)
 
-This is a starting point for Python solutions to the
-["Build Your Own Docker" Challenge](https://codecrafters.io/challenges/docker).
-
 In this challenge, you'll build a program that can pull an image from
 [Docker Hub](https://hub.docker.com/) and execute commands in it. Along the way,
 we'll learn about [chroot](https://en.wikipedia.org/wiki/Chroot),
 [kernel namespaces](https://en.wikipedia.org/wiki/Linux_namespaces), the
 [docker registry API](https://docs.docker.com/registry/spec/api/) and much more.
 
-**Note**: If you're viewing this repo on GitHub, head over to
-[codecrafters.io](https://codecrafters.io) to try the challenge.
-
-# Passing the first stage
-
-The entry point for your Docker implementation is `app/main.py`. Study and
-uncomment the relevant code, and push your changes to pass the first stage:
-
-```sh
-git add .
-git commit -m "pass 1st stage" # any msg
-git push origin master
-```
-
-That's all!
-
-# Stage 2 & beyond
-
-Note: This section is for stages 2 and beyond.
+## Setup
 
 You'll use linux-specific syscalls in this challenge. so we'll run your code
 _inside_ a Docker container.
